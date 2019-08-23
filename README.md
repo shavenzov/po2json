@@ -1,19 +1,14 @@
 # po2json
-
-[![Build Status](https://secure.travis-ci.org/mikeedwards/po2json.png?branch=master)](http://travis-ci.org/mikeedwards/po2json)
-[![Dependency Status](https://david-dm.org/mikeedwards/po2json.png?theme=shields.io)](https://david-dm.org/mikeedwards/po2json)
-[![devDependency Status](https://david-dm.org/mikeedwards/po2json/dev-status.png?theme=shields.io)](https://david-dm.org/mikeedwards/po2json#info=devDependencies)
-
-[![NPM](https://nodei.co/npm/po2json.png)](https://nodei.co/npm/po2json/)
-
 Convert PO files to Javascript objects or JSON strings. The result is Jed-compatible.
+It's the fork of [mikeedwards/po2json](https://github.com/mikeedwards/po2json).
+In this version disabled escaping **'{{'** and **'}}'** symbols.
 
 ## Getting Started
-Install the module with: `npm install po2json`
+Install the module with: `npm install @topcon/po2json`
 
 ### As a library
 ```
-var po2json = require('po2json');
+var po2json = require('@topcon/po2json');
 ```
 
 ### As an executable
@@ -81,7 +76,7 @@ and `jedold` refers to Jed formats below 1.1.0
 
 ### Basic usage with PO data as a buffer/string
 ```
-var po2json = require('po2json'),
+var po2json = require('@topcon/po2json'),
     fs = require('fs');
 fs.readFile('messages.po', function (err, buffer) {
   var jsonData = po2json.parse(buffer);
@@ -91,7 +86,7 @@ fs.readFile('messages.po', function (err, buffer) {
 
 ### Parse a PO file directly - Asynchronous Usage
 ```
-var po2json = require('po2json');
+var po2json = require('@topcon/po2json');
 po2json.parseFile('messages.po', function (err, jsonData) {
     // do something interesting ...
 });
@@ -99,7 +94,7 @@ po2json.parseFile('messages.po', function (err, jsonData) {
 
 ### Parse a PO file directly - Synchronous Usage
 ```
-var po2json = require('po2json');
+var po2json = require('@topcon/po2json');
 var jsonData = '';
 try {
     jsonData = po2json.parseFileSync('messages.po');
@@ -109,7 +104,7 @@ try {
 
 ### Parse a PO file to messageformat format
 ```
-var po2json = require('po2json'),
+var po2json = require('@topcon/po2json'),
     MessageFormat = require('messageformat');
 
 po2json.parseFile('es.po', { format: 'mf' }, function (err, translations) {
@@ -128,7 +123,7 @@ po2json.parseFile('es.po', { format: 'mf' }, function (err, translations) {
 
 ### Parse a PO file to messageformat format using the full format
 ```
-var po2json = require('po2json'),
+var po2json = require('@topcon/po2json'),
     MessageFormat = require('messageformat');
 
 po2json.parseFile('messages.po', { format: 'mf', fullMF: true }, function (err, jsonData) {
@@ -141,7 +136,7 @@ po2json.parseFile('messages.po', { format: 'mf', fullMF: true }, function (err, 
 
 ### Parse a PO file to Jed >= 1.1.0 format
 ```
-var po2json = require('po2json'),
+var po2json = require('@topcon/po2json'),
     Jed = require('jed');
 po2json.parseFile('messages.po', { format: 'jed' }, function (err, jsonData) {
     var i18n = new Jed( jsonData );
@@ -151,7 +146,7 @@ po2json.parseFile('messages.po', { format: 'jed' }, function (err, jsonData) {
 ### Parse a PO file to Jed < 1.1.0 format
 __If you are using an older version of Jed, be sure to specify this format specifically.__
 ```
-var po2json = require('po2json'),
+var po2json = require('@topcon/po2json'),
     Jed = require('jed');
 po2json.parseFile('messages.po', { format: 'jedold' }, function (err, jsonData) {
     var i18n = new Jed( jsonData );
