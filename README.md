@@ -1,6 +1,8 @@
 # po2json
-Convert PO files to Javascript objects or JSON strings. The result is Jed-compatible.\
-It's the fork of [mikeedwards/po2json](https://github.com/mikeedwards/po2json).\
+Convert PO files to Javascript objects or JSON strings. The result is Jed-compatible.
+
+It's the fork of [mikeedwards/po2json](https://github.com/mikeedwards/po2json).
+
 In this version disabled escaping **'{{'** and **'}}'** symbols.
 
 ## Getting Started
