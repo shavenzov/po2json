@@ -1,18 +1,18 @@
 {
-  "name": "@topcon/po2json",
+  "name": "@shavenzov/po2json",
   "description": "Convert PO files to JSON",
   "version": "1.0.1-alpha",
-  "homepage": "https://mos-git.topcon.com/projects/TWC/repos/po2json/browse",
+  "homepage": "https://github.com/shavenzov/po2json",
   "author": {
     "name": "Denis Shavenzov",
-    "email": "dshavenzov@topcon.com"
+    "email": "shavenzov@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://mos-git.topcon.com/scm/twc/po2json.git"
+    "url": "https://github.com/shavenzov/po2json.git"
   },
   "bugs": {
-    "url": "https://tps-jira.topcon.com/projects/TWC"
+    "url": "https://github.com/shavenzov/po2json/issues"
   },
   "licenses": [
     {
